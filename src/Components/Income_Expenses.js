@@ -10,7 +10,6 @@ export const Income_Expenses = () => {
                 <h6>Expense</h6>
                 <p className = "money expense">$0.00</p>
                 
-              
             </div>  
         </>
     )

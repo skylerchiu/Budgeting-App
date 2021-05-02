@@ -1,9 +1,9 @@
-import react, {useReducer, createContext} from 'react'
+import React, {useReducer, createContext} from 'react'
 import AppReducer from './AppReducer'
 
 //initial state
 const initialState = {
-    transaction: [],
+    transactions: [],
     goal: []
 }
 
@@ -19,7 +19,7 @@ export const GlobalProvider = ({children}) =>{
     function deleteTransaction(id){
         dispatch({
             type:'DELETE_TRANSACTION',
-            payload:id
+            payload: id
         });
     }
 
@@ -27,7 +27,7 @@ export const GlobalProvider = ({children}) =>{
     function addTransaction (transaction){
         dispatch({
             type: 'ADD_TRANSACTION',
-            payload:transaction
+            payload: transaction
         });
     }
 
