@@ -6,6 +6,7 @@ export const AddTransaction = () => {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState('');
     const[date, setDate] = useState('');
+    const [show, toggleShow] = React.useState(true);
 
     const {addTransaction} = useContext(GlobalContext)
 
@@ -23,6 +24,7 @@ export const AddTransaction = () => {
     }
     return (
         <div>
+            {!show &&
             <form onSubmit = {onSubmit}>
                 <h4>New Transaction</h4>
                 
@@ -42,8 +44,12 @@ export const AddTransaction = () => {
                 </div>
                 <button className = "add-transaction-button">Add Transaction</button>
 
-            </form>
-
+            </form>}
+            <button className = "add-button"
+                    onClick={() => toggleShow(!show)}
+                    >
+                    {show ? '+' : 'X'}
+            </button>
         </div>
     )
 }

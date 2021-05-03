@@ -200,6 +200,22 @@ input[type = 'date']{
   box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.list li.plus{
+  border-right:15px solid #2ecc71;
+}
+
+.list li.minus{
+  border-right: 15px solid #c0392b;
+}
+
+.list li.plus > .amount{
+  color:#2ecc71
+}
+
+.list li.minus > .amount{
+  color:#c0392b;
+}
+
 .delete-btn{
   cursor:pointer;
   background-color: #e74c3c;
@@ -244,6 +260,47 @@ input[type = 'date']{
 input[type = 'date'] {
   cursor: text;
 }
+.edit-goal{
+  cursor: pointer;
+  background-color: black;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  font-size: 14px;
+  padding: 8px 5px 8px 5px;
+  width: 25%;
+  border-radius: 20px;
+  justify-content: center;
+  margin-top: 10px;    
+  transition: 0.2s ease;
+}
 
+.edit-goal:hover{
+  background-color: rgb(73, 73, 73)
+}
 
-/*Progress Bar*/
+.add-button{
+  cursor: pointer;
+  background-color: black;
+  color: #fff;
+  border: 0;
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  font-size: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  transition: 0.2s ease;
+}
+
+.add-button:hover{
+  background-color:rgb(73, 73, 73)
+}

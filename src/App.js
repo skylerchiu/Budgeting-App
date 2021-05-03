@@ -17,8 +17,9 @@ function App() {
      <Balance/>
      <ProgressBar/>
      <Income_Expenses/>
-     <AddTransaction/>
      <TransactionList/>
+     <AddTransaction/>
+
      </div>
     </div>
     </GlobalProvider>
