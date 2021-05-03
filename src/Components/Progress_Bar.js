@@ -16,7 +16,13 @@ export const ProgressBar = () => {
             goal
         }
     }
-    
+    const containerStyles = {
+        height: 25,
+        width: '100%',
+        backgroundColor: "#e0e0de",
+        border: '1px solid black',
+        borderRadius: 50,  
+      }
 
     const progressBarFill = {
         height: '100%',
@@ -26,18 +32,27 @@ export const ProgressBar = () => {
         borderRadius: 'inherit',
         textAlign: 'right',
     }
-
+    const componentStyles = {
+        backgroundColor: 'white',
+        padding: 10,
+        //border: '3px solid black',
+        borderRadius: 30,
+        marginTop: 20,
+        boxShadow:  '0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+  
+    }
     return(
-        <div class = "progress-bar-container">
-            <div class = "progress-bar-back">
+        <div style = {componentStyles}>
+                <h5>Target Balance = ${goal}</h5>
+            <div style = {containerStyles}>
                 <div style = {progressBarFill}>
-                    <span class = "goal-precent">${completed}</span>
+                    <span class = "goal-precent">%{completed}</span>
                 </div>
             </div>
             
         <form onSubmit = {onSubmit}>
             <div className = "form-control">
-                <label htmlFor = "amount">Goal</label>
+                <label htmlFor = "text">Goal</label>
                 <input type = "number" value = {goal} min = '1' onChange={(e) => setGoal(e.target.value)} placeholder = "Enter Goal" required></input>
             </div>
 

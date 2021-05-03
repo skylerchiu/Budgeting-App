@@ -7,9 +7,9 @@ export const Balance = () => {
     const total = amounts.reduce((acc,item) => (acc+=item), 0).toFixed(2)
 
     return (
-        <>
+        <div className = "balance">
             <h2>Balance</h2>
             <h3 id = "Balance">${total}</h3>
-        </>
+        </div>
     )
 }

@@ -1,19 +1,249 @@
+/*Font: DM Sans*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+:root{
+  --box-shadow: 0 1px 3px rgba(0, 0, 0.12), 0, 1px, 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing:border-box;
+
+}
+
+body{
+  display: flex;
+  background-image: linear-gradient(rgb(62, 184, 255), white);
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container{
+  margin: 30px auto;
+  width: 650px;
+}
+
+/*Header*/
+h1{
+  font-size: x-large;
+  text-align: center;
+  font-size: 40px;
+  text-align: left;
+}
+
+/*Balance Title */
+h2{
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+/*Blance Number*/
+h3{
+  letter-spacing: 1px;
+  margin:0;
+  text-align: center;
+  font-size: 50px;
+  color:white;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/*component title*/
+h4{
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  font-size: 25px;
+}
+
+/*Target Balance*/
+h5{
+  text-align: center;
+  font-size: x-large;
+  padding: 0;
+  margin: 20px;
+  margin-top: 10px;
+}
+
+/*Income Expenses*/
+h6 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+.balance{
+  border: 3px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: black;
+  border-radius: 20px;
+
+}
+.history h3{
+  margin-top: 0;
+}
+
+.income-expense-container{
+  background-color: transparent;
+  box-shadow: var(--box-shadow);
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+
+
+.income-expense-container >div {
+  flex: 1;
+  text-align: center;
+  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.income-expense-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 30px ;
+  background-color: white;
+  margin: 20px 20px 0 0;
+}
+
+
+.income-expense-container > div:last-of-type {
+  border-right: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: white;
+  margin: 20px 0px 0 20px;
+}
+
+.income-expense-container p{
+  font-size: 25px;
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.money.income{
+  color: #2ecc71;
+}
+
+.money.expense{
+  color: #c0392b;
+}
+
+label {
+  display:inline-block;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+input[type = 'text'],
+input[type = 'number'],
+input[type = 'date']{
+  border-radius: 10px;
+  display: block;
+  font-size: 16px;
+  padding:10px;
+  width:100%;
+}
+
+.add-transaction-button {
+  cursor: pointer;
+  background-color: black;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display:block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}
+
+.add-transaction-button:hover{
+  background-color: rgb(73, 73, 73);
+}
+.add-transaction-button:focus,
+.delete-btn:focus{
+  outline:0;
+}
+
+.list{
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li{
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color:#333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 20px;
+  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.delete-btn{
+  cursor:pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color:#fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 5px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-70%, -50%);
+  opacity:0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn{
+  opacity: 1;
+  
+}
+
+.amount{
+  text-align: right;
+   font-weight: bold;
+}
+.date{
+   position: absolute;
+   font-size: x-small;
+   transform: translate(0%, 20%);
+}
+
+.text{
+   font-size: large;
+   transform: translate(0, -35%);
+   font-weight: bold;
+}
+
+.date, .text{
+  padding-left: 15px;
+}
+
+input[type = 'date'] {
+  cursor: text;
+}
 
 
 /*Progress Bar*/
-.progress-bar-container{
-  height: 25px;
-  width: 100%;
-  background-color: #e0e0de;
-  border: 1px solid black;
-  border-radius: 50px;  
-}
-
-.progress-bar-back{
-  background-color: white;
-  padding: 10px;
-  border-radius: 30px;
-  margin-top: 20px;
-  box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}

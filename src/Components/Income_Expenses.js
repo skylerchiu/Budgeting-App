@@ -18,12 +18,14 @@ export const Income_Expenses = () => {
     return (
         <>
             <div className = "income-expense-container">
-                <h6>Income</h6>
-                <p className = "money income">${income}</p>
-
-                <h6>Expense</h6>
-                <p className = "money expense">${expense}</p>
-                
+                <div>
+                    <h6>Income</h6>
+                    <p className = "money income">${income}</p>
+                </div>
+                <div>
+                    <h6>Expense</h6>
+                    <p className = "money expense">${expense}</p>
+                </div>
             </div>  
         </>
     )

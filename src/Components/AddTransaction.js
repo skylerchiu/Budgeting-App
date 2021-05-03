@@ -24,7 +24,7 @@ export const AddTransaction = () => {
     return (
         <div>
             <form onSubmit = {onSubmit}>
-                <h3>New Transaction</h3>
+                <h4>New Transaction</h4>
                 
                 <div className = "form-control">
                     <label htmlFor = "text">Transaction Description</label>
