@@ -77,6 +77,16 @@ h6 {
   color: black;
 }
 
+/*Chart title*/
+h7 {
+  display: flex;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .balance{
   border: 3px solid black;
   padding-top: 10px;
@@ -150,12 +160,24 @@ label {
 
 input[type = 'text'],
 input[type = 'number'],
-input[type = 'date']{
+input[type = 'date'],
+input [type = 'category']{
   border-radius: 10px;
   display: block;
   font-size: 16px;
   padding:10px;
   width:100%;
+}
+
+select{
+  border-radius: 10px;
+  display: block;
+  font-size: 16px;
+  padding:10px;
+  width:100%;
+  display:inline-block;
+  margin: 10px 0;
+  font-size: 20px;
 }
 
 .add-transaction-button {
@@ -257,9 +279,16 @@ input[type = 'date']{
   padding-left: 15px;
 }
 
+.category-text{
+  position: absolute;
+padding-left: 400px;
+  font-weight: bold;
+}
+
 input[type = 'date'] {
   cursor: text;
 }
+
 .edit-goal{
   cursor: pointer;
   background-color: black;
@@ -303,4 +332,23 @@ input[type = 'date'] {
 
 .add-button:hover{
   background-color:rgb(73, 73, 73)
+}
+
+.expense-option{
+  background-color: #c0392b;
+}
+.income-option{
+  background-color: #2ecc71;
+}
+
+.chart-wrapper{
+  width:45%;
+}
+
+.chart-container{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
 }

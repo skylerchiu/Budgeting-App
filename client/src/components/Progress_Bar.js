@@ -13,6 +13,10 @@ export const ProgressBar = () => {
     if (completed_bar > 100){
         completed_bar=100;
     }
+
+    if(completed_bar <0){
+        completed_bar=0;
+    }
     const onSubmit = e =>{
         e.preventDefault();
         const newGoal = {
