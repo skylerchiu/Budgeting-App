@@ -1,19 +1,15 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from '../context/GlobalState';
-import { Doughnut, defaults} from 'react-chartjs-2';
+import { Doughnut} from 'react-chartjs-2';
 
 //defaults.plugins.legend = false;
 
 export const CategoryPieChartIncome = () => {
     const {transactions } = useContext(GlobalContext);
-    const category = transactions.map(transaction => transaction.category);
-    const amounts = transactions.map(transaction => transaction.amount);
     const transaction = transactions.map (transaction => transaction)
 
-
-
   var salaryArray = transaction.filter(function (el) {
-    return el.category == 6;
+    return el.category === 6;
   });
   const salary_amounts = salaryArray.map(transaction => transaction.amount);
   const salary_total= salary_amounts
@@ -23,7 +19,7 @@ export const CategoryPieChartIncome = () => {
   
     
   var investArray = transaction.filter(function (el) {
-    return el.category == 7;
+    return el.category === 7;
   });
   const invest_amounts = investArray.map(transaction => transaction.amount);
   const invest_total= invest_amounts
@@ -33,7 +29,7 @@ export const CategoryPieChartIncome = () => {
 
 
 var otherArray = transaction.filter(function (el) {
-  return el.category == 8;
+  return el.category === 8;
 });
 const other_amounts = otherArray.map(transaction => transaction.amount);
 const other_total= other_amounts

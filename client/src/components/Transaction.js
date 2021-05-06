@@ -9,7 +9,6 @@ export const Transaction = ({transaction}) => {
     const [date,time] = dateTime.split('T')
     
     var category = '';
-    var category_num = parseInt(transaction.category, 10);
     switch(transaction.category) {
         case 1:
           category = 'Food'

@@ -7,7 +7,7 @@ export const ProgressBar = () => {
     const total = amounts.reduce ((acc, item) => (acc += item), 0).toFixed(2);
     const [show, toggleShow] = React.useState(true);
 
-    var [goal, setGoal] = useState(1000);
+    var [goal, setGoal] = useState(10000);
     var completed = (((+total)/goal)*100).toFixed(1);
     var completed_bar = completed
     if (completed_bar > 100){
