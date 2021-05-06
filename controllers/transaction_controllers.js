@@ -27,7 +27,7 @@ exports.addTransaction = async (req, res, next) =>{
 
 
     try {
-    const { text, amount } = req.body; //only works with values in themodel
+    const { text, amount, date, category } = req.body; //only works with values in themodel
 
     const transaction = await Transaction.create(req.body);
 

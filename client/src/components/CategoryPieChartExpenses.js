@@ -64,7 +64,7 @@ const misc_total= misc_amounts
     
 const state = {
 display: false,
-  labels: ['Food','Clothes', 'Housing', 'Transportation', 'Miscellaneous'],
+  labels: ['Food','Clothing', 'Housing', 'Transportation', 'Miscellaneous'],
   datasets: [
     {
       label: 'Rainfall',

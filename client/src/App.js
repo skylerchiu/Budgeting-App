@@ -3,7 +3,7 @@ import './App.css';
 import {Header} from './components/Header'
 import {Balance} from './components/Balance'
 import {ProgressBar} from './components/Progress_Bar'
-import {Income_Expenses} from './components/Income_Expenses'
+import {IncomeExpenses} from './components/IncomeExpenses'
 import {AddTransaction} from './components/AddTransaction'
 import {TransactionList} from './components/TransactionList'
 import {GlobalProvider} from './context/GlobalState'
@@ -16,10 +16,9 @@ function App() {
     <div>
     <div className = "container">
      <Header/>
-  
      <Balance/>
      <ProgressBar/>
-     <Income_Expenses/>
+     <IncomeExpenses/>
      <TransactionList/>
      <AddTransaction/>
   
